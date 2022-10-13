@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { runDeleng, runGawe, runIsi, runBak } = require("../command");
+const { runDeleng, runGawe, runIsi, runBak, runWit } = require("../command");
 const { cmdList } = require("./script-list");
 
 //open and read .ngpk file
@@ -53,6 +53,9 @@ const parseScript = (script = "") => {
       break;
     case cmdList[3]: //bak
       return runBak(script);
+      break;
+    case cmdList[4]: //wit
+      return runWit(script);
       break;
     default:
       console.log("perintahe ora ditemukna : " + cmd.command);

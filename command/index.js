@@ -51,9 +51,22 @@ const runBak = (value = "") => {
   return `const ${getVariableName} = ${getVariableValue}`;
 };
 
+//Wit -> object
+const runWit = (value = "") => {
+  //format
+  // wit gedang -> {godong: 'ijo', kedebog : 2}
+
+  const splitScript = value.split("->");
+  const getVariableName = splitScript[0].split(" ")[1];
+  const getVariableValue = splitScript[1];
+
+  return `const ${getVariableName} = ${getVariableValue}`;
+};
+
 module.exports = {
   runDeleng: runDeleng,
   runGawe: runGawe,
   runIsi: runIsi,
   runBak: runBak,
+  runWit: runWit,
 };

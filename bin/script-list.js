@@ -4,6 +4,7 @@ const cmd_list = [
   "gawe", //let
   "isi", //const
   "bak", //array
+  "wit", //object
 ];
 
 module.exports = { cmdList: cmd_list };
