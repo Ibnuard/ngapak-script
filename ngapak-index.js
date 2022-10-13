@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
-const commandParser = require("./command-parser");
-const { createNgapakFile, runNgapakFile } = require("./utils");
+const commandParser = require("./bin/command-parser");
+const { createNgapakFile, runNgapakFile } = require("./bin/utils");
 //const utils = require("./utils");
 
 const value = commandParser.parseSentence(yargs.argv._);

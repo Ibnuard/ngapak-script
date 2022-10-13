@@ -2,7 +2,7 @@
   "name": "ngapak-script",
   "version": "1.0.1",
   "description": "Ngapak Script is new programming language based on Javascript",
-  "main": "bin/index.js",
+  "main": "ngapak-index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,10 @@
   "author": "Ibnu Putra",
   "license": "ISC",
   "bin": {
-    "ngapak": "./bin/index.js"
+    "ngapak": "./ngapak-index.js"
   },
   "dependencies": {
-    "yargs": "^17.0.1",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "yargs": "^17.0.1"
   }
 }
