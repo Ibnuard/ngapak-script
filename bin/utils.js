@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { runDeleng, runGawe } = require("../command");
+const { runDeleng, runGawe, runIsi, runBak } = require("../command");
 const { cmdList } = require("./script-list");
 
 //open and read .ngpk file
@@ -10,13 +10,6 @@ const readNgapakFile = () => {
   } catch (e) {
     console.log("Error:", e.stack);
   }
-};
-
-//local utils
-const removeCommentFromCode = (code = "") => {
-  const cleanCode = code.split("//")[0];
-
-  return cleanCode;
 };
 
 //get command based on list
@@ -55,6 +48,12 @@ const parseScript = (script = "") => {
     case cmdList[1]: //gawe
       return runGawe(script);
       break;
+    case cmdList[2]: //isi
+      return runIsi(script);
+      break;
+    case cmdList[3]: //bak
+      return runBak(script);
+      break;
     default:
       console.log("perintahe ora ditemukna : " + cmd.command);
       break;
@@ -63,7 +62,12 @@ const parseScript = (script = "") => {
 
 //run script
 const runScript = (command) => {
-  eval(command);
+  try {
+    eval(command);
+  } catch (error) {
+    //console.error("punten, format perintahe ora sesuai!");
+    console.log("Punten, format perintahe ora sesuai!");
+  }
 };
 
 //=========================================
@@ -78,10 +82,12 @@ const createNgapakFile = (erorr) => {
   // writeFile function with filename, content and callback function
   fs.writeFile(
     "indeks.ngpk",
-    "deleng -> 'halo dunya :)' //coba perentah `ngapak jalana` ning cmd",
+    "deleng -> 'halo dunya, ora ngapak ora kepenak'",
     function (err) {
       if (err) throw err;
-      console.log("File wis dadi digawe!");
+      console.log(
+        "file wis digawe. Coba jalana perintah `ngapak jalana` nggo mulai jalana projek!"
+      );
     }
   );
 };

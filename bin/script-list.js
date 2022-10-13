@@ -1,3 +1,8 @@
-const cmd_list = ["deleng", "gawe"];
+const cmd_list = [
+  "deleng", //console.log
+  "gawe", //let
+  "isi", //const
+  "bak", //array
+];
 
 module.exports = { cmdList: cmd_list };

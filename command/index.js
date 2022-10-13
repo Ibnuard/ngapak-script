@@ -11,10 +11,38 @@ const runDeleng = (value = "") => {
   return `console.log(${result})`;
 };
 
-//gawe -> const
+//gawe -> let
 const runGawe = (value = "") => {
   //format
   // gawe tulisan -> args
+
+  const splitScript = value.split("->");
+  const getVariableName = splitScript[0].split(" ")[1];
+  const getVariableValue = splitScript[1];
+
+  if (getVariableValue.length > 0) {
+    return `let ${getVariableName} = ${getVariableValue}`;
+  } else {
+    return `let ${getVariableName}`;
+  }
+};
+
+//isi -> const
+const runIsi = (value = "") => {
+  //format
+  // gawe tulisan -> args
+
+  const splitScript = value.split("->");
+  const getVariableName = splitScript[0].split(" ")[1];
+  const getVariableValue = splitScript[1];
+
+  return `const ${getVariableName} = ${getVariableValue}`;
+};
+
+//Bak -> array
+const runBak = (value = "") => {
+  //format
+  // bak kosongan -> [1,2,3]
 
   const splitScript = value.split("->");
   const getVariableName = splitScript[0].split(" ")[1];
@@ -26,4 +54,6 @@ const runGawe = (value = "") => {
 module.exports = {
   runDeleng: runDeleng,
   runGawe: runGawe,
+  runIsi: runIsi,
+  runBak: runBak,
 };
