@@ -1,6 +1,6 @@
 {
   "name": "ngapak-script",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ngapak Script is new programming language based on Javascript",
   "main": "ngapak-index.js",
   "scripts": {
