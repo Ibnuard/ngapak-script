@@ -29,8 +29,6 @@ Kalo udah nanti bakal muncul file bernama indeks.ngpk
    * [Contoh](#contoh)
    * [Perintah](#perintah)
   * [Disclaimer](#disclaimer)
-   * [Showcase](#showcase)
-      * [Highlight Text Editor](#highlight-text-editor)
 
 ## Contoh 
 
