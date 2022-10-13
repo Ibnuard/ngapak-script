@@ -41,7 +41,7 @@ gawe jeneng -> "Ibnu";
 deleng -> "Halo lur jenengku : " + jeneng
 ```
 
-lalu di cmd jalankan perintah 'ngapak jalana' untuk menjalankan script yang telah dibuat.
+lalu di cmd jalankan perintah `ngapak jalana` untuk menjalankan script yang telah dibuat.
 
 ### Perintah
 
