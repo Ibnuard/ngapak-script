@@ -1,3 +1,4 @@
+//list command tersedia
 const cmd_list = [
   "deleng", //console.log
   "gawe", //let
