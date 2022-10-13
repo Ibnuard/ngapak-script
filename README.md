@@ -26,64 +26,27 @@ Kalo udah nanti bakal muncul file bernama indeks.ngpk
 * [Ngapak Script](#ngapak-script)
    * [Cara Pasang &amp; Menjalankan](#cara-pasang--menjalankan)
    * [Table Of Content](#list-konten)
-   * [Example](#example)
-   * [Command](#command)
+   * [Contoh](#contoh)
+   * [Perintah](#perintah)
   * [Disclaimer](#disclaimer)
    * [Showcase](#showcase)
       * [Highlight Text Editor](#highlight-text-editor)
 
-[github-markdown-toc](https://github.com/ekalinin/github-markdown-toc)
+## Contoh 
 
-## Example 
-
-Example : 
+Contoh : 
 
 ```
-literally umur itu 21
-spill "Umur lu " + umur
-kalo umur lebih gede 20
-  spill "Elu tua"
-  literally umurgua itu umur + 10
-  spill "Kalo gua umurnya " + umurgua
-  kalo umurgua lebih gede 30
-    spill "gua lebih tua"
-  udahan
-kalogak
-  spill "dasar bocil"
-udahan
-spill "Udahan ah"
+gawe jeneng -> "Ibnu";
+deleng -> "Halo lur jenengku : " + jeneng
 ```
 
-```
-literally jumlah itu 10
-spill "Jumlah: " + jumlah
+### Perintah
 
-whichis jumlah itu 11
-spill "Jumlah: " + jumlah
+Perintahnya berdasarkan perintah jawa ngapak, berikut beberapa perintah yang bisa dilakukan.
 
-literally isHidup itu positive vibes
-spill "is hidup :" + isHidup
-
-fomo i endup 10
-  kalo i lebih gede 3
-    spill "loop ke " + i
-  udahan
-udahan
-```
-
-### Command
-
-Some command just like javascript, the only different is keyword and this language will translate to javascript and run as javascript. I know, this is just for fun.
-
-- [List Command](Command.md)
+- [List Perintah](Command.md)
 
 ### Disclaimer
 
-This project just for fun, I don't want to hurt anyone. Just from idea "what if jaksel language is a programming language" and make it true. This project only for education purpose, not for production ready.
-
-## Showcase
-
-Some cool project from you, submit your project like highlight text, jaksel-to-js, etc. Make PR link to your repo !. Don't limit your creativity
-
-### Highlight Text Editor
-- [vim-jaksel](https://github.com/cocatrip/vim-jaksel) jaksel programming language plugin for (n)vim
+Project ini saya buat hanya untuk iseng belaka, bisa juga buat belajar, Saya terinspirasi dari Jaksel-language tapi selebihnya dari sistem kompilasi Saya buat sendiri. JANGAN DI GUNAKAN DI PRODUCTION ya sedulur - ORA NGAPAK ORA KEPENAKK....
