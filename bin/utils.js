@@ -1,5 +1,12 @@
 const fs = require("fs");
-const { runDeleng, runGawe, runIsi, runBak, runWit } = require("../command");
+const {
+  runDeleng,
+  runGawe,
+  runIsi,
+  runBak,
+  runWit,
+  runMuter,
+} = require("../command");
 const { cmdList } = require("./script-list");
 
 //open and read .ngpk file
@@ -57,6 +64,9 @@ const parseScript = (script = "") => {
     case cmdList[4]: //wit
       return runWit(script);
       break;
+    case cmdList[5]: //wit
+      return runMuter(script);
+      break;
     default:
       console.log("perintahe ora ditemukna : " + cmd.command);
       break;
@@ -69,7 +79,7 @@ const runScript = (command) => {
     eval(command);
   } catch (error) {
     //console.error("punten, format perintahe ora sesuai!");
-    console.log("Punten, format perintahe ora sesuai!");
+    console.log("Punten, format perintahe ora sesuai : + " + command);
   }
 };
 

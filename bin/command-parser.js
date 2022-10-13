@@ -1,5 +1,3 @@
-const {} = require("./utils");
-
 //parse the value
 function parseSentence(words) {
   return words[1];

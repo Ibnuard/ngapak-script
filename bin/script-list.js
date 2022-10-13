@@ -5,6 +5,7 @@ const cmd_list = [
   "isi", //const
   "bak", //array
   "wit", //object
+  "muter", //muter
 ];
 
 module.exports = { cmdList: cmd_list };
