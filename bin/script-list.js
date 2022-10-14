@@ -3,8 +3,8 @@ const cmd_list = [
   "deleng", //console.log
   "gawe", //let
   "isi", //const
-  "bak", //array
-  "wit", //object
+  "keranjangi", //array
+  "barange", //object
   "muter", //muter
 ];
 

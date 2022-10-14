@@ -1,7 +1,7 @@
 //deleng -> console.log
 const runDeleng = (value = "") => {
   // format
-  // deleng -> "arg"
+  // deleng"arg"
   //
 
   const splitArgs = value.split("->");

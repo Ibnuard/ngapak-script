@@ -1,4 +1,10 @@
 const { cmdList } = require("../bin/script-list");
+const { runBarange } = require("./barange");
+const { runDeleng } = require("./deleng");
+const { runGawe } = require("./gawe");
+const { runIsi } = require("./isi");
+const { runKeranjang } = require("./keranjangi");
+
 //muter -> for
 const runMuter = (value = "") => {
   //format
@@ -16,19 +22,21 @@ const runMuter = (value = "") => {
   const todo = splitScript[1];
 
   const resTodo = todo.replace(todoPattern, ";");
+
   //get command based on list
-  const _getCommand = (line = "") => {
+  const getCommand = (line = "") => {
     const cmd = line.split(" ")[0];
 
     return cmd;
   };
 
-  const _parseScript = (script = "") => {
-    const cmd = _getCommand(script);
+  //parse script from .ngpk
+  const parseScript = (script = "") => {
+    const cmd = getCommand(script);
 
     switch (cmd) {
       case cmdList[0]: //deleng
-        return scriptDeleng(script);
+        return runDeleng(script);
         break;
       case cmdList[1]: //gawe
         return runGawe(script);
@@ -40,7 +48,7 @@ const runMuter = (value = "") => {
         return runKeranjang(script);
         break;
       case cmdList[4]: //wit
-        return runWit(script);
+        return runBarange(script);
         break;
       case cmdList[5]: //wit
         return runMuter(script);
@@ -57,7 +65,7 @@ const runMuter = (value = "") => {
     let temp = "";
 
     for (let i = 0; i < split.length; i++) {
-      const trans = _parseScript(split[i]);
+      const trans = parseScript(split[i]);
       temp = temp + trans + ";";
     }
 

@@ -35,7 +35,7 @@ const compileScript = (command) => {
     eval(command);
   } catch (error) {
     //console.error("punten, format perintahe ora sesuai!");
-    console.log("Punten, format perintahe ora sesuai : + " + command);
+    console.log("Punten, ana format perintahe sing ora sesuai!");
   }
 };
 
