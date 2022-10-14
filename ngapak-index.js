@@ -7,7 +7,7 @@ const { createNgapakFile, runNgapakFile } = require("./bin/utils");
 const value = commandParser.parseSentence(yargs.argv._);
 const cmd = commandParser.parseCommand(yargs.argv._);
 
-if (cmd == "gawe") {
+if (cmd == "labuhi") {
   createNgapakFile();
 } else if (cmd == "jalana") {
   runNgapakFile();

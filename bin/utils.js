@@ -1,13 +1,5 @@
 const fs = require("fs");
-const {
-  runDeleng,
-  runGawe,
-  runIsi,
-  runBak,
-  runWit,
-  runMuter,
-} = require("../command");
-const { cmdList } = require("./script-list");
+const { convertScript } = require("./converter");
 
 //open and read .ngpk file
 const readNgapakFile = () => {
@@ -17,13 +9,6 @@ const readNgapakFile = () => {
   } catch (e) {
     console.log("Error:", e.stack);
   }
-};
-
-//get command based on list
-const getCommand = (line = "") => {
-  const cmd = line.split(" ")[0];
-
-  return cmd;
 };
 
 //run script per line
@@ -38,43 +23,14 @@ const runAllScript = (script = "") => {
   let temp = "";
 
   for (let i = 0; i < makeSingleLine.length; i++) {
-    temp = temp + parseScript(makeSingleLine[i]) + ";";
+    temp = temp + convertScript(makeSingleLine[i]) + ";";
   }
 
-  runScript(temp);
+  compileScript(temp);
 };
 
-//parse script from .ngpk
-const parseScript = (script = "") => {
-  const cmd = getCommand(script);
-
-  switch (cmd) {
-    case cmdList[0]: //deleng
-      return runDeleng(script);
-      break;
-    case cmdList[1]: //gawe
-      return runGawe(script);
-      break;
-    case cmdList[2]: //isi
-      return runIsi(script);
-      break;
-    case cmdList[3]: //bak
-      return runBak(script);
-      break;
-    case cmdList[4]: //wit
-      return runWit(script);
-      break;
-    case cmdList[5]: //wit
-      return runMuter(script);
-      break;
-    default:
-      console.log("perintahe ora ditemukna : " + cmd.command);
-      break;
-  }
-};
-
-//run script
-const runScript = (command) => {
+//compile script
+const compileScript = (command) => {
   try {
     eval(command);
   } catch (error) {
@@ -95,7 +51,7 @@ const createNgapakFile = (erorr) => {
   // writeFile function with filename, content and callback function
   fs.writeFile(
     "indeks.ngpk",
-    "deleng -> 'halo dunya, ora ngapak ora kepenak'",
+    "deleng -> 'halo dunya, ora ngapak ora kepenak';",
     function (err) {
       if (err) throw err;
       console.log(
